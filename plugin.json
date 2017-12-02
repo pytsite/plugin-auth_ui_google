@@ -1,0 +1,30 @@
+{
+  "name": "auth_ui_google",
+  "version": "1.0",
+  "description": {
+    "en": "Google Sign In UI",
+    "ru": "Google Sign In UI",
+    "uk": "Google Sign In UI"
+  },
+  "url": "https://github.com/pytsite/plugin-auth_ui_google",
+  "author": {
+    "name": "Alexander Shepetko",
+    "email": "a@shepetko.com",
+    "url": "https://shepetko.com"
+  },
+  "requires": {
+    "packages": [
+      "google-api-python-client"
+    ],
+    "plugins": [
+      "assetman",
+      "auth_google",
+      "form",
+      "jquery",
+      "permissions",
+      "reload_ui",
+      "settings",
+      "widget"
+    ]
+  }
+}
