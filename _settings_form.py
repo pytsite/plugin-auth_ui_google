@@ -15,17 +15,17 @@ class Form(_settings.Form):
         self.add_widget(_widget.input.Text(
             uid='setting_client_id',
             weight=10,
-            label=_lang.t('auth_google@client_id'),
+            label=_lang.t('auth_ui_google@client_id'),
             required=True,
-            help=_lang.t('auth_google@client_id_setup_help'),
+            help=_lang.t('auth_ui_google@client_id_setup_help'),
         ))
 
         self.add_widget(_widget.input.Text(
             uid='setting_client_secret',
             weight=20,
-            label=_lang.t('auth_google@client_secret'),
+            label=_lang.t('auth_ui_google@client_secret'),
             required=True,
-            help=_lang.t('auth_google@client_secret_setup_help'),
+            help=_lang.t('auth_ui_google@client_secret_setup_help'),
         ))
 
         super()._on_setup_widgets()

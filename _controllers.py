@@ -14,7 +14,7 @@ class Authorization(_routing.Controller):
         # Check for error from Google
         error = self.arg('error')
         if error == 'access_denied':
-            raise self.forbidden(_lang.t('auth_google@user_declined_authorization'))
+            raise self.forbidden(_lang.t('auth_ui_google@user_declined_authorization'))
 
         # Check for code from Google
         code = self.arg('code')

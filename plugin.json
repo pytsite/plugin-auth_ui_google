@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": {
     "en": "Google Sign In UI",
     "ru": "Google Sign In UI",
@@ -20,6 +20,7 @@
       "assetman",
       "auth_google",
       "form",
+      "font_awesome",
       "jquery",
       "permissions",
       "reload_ui",
