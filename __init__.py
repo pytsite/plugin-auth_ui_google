@@ -6,9 +6,19 @@ __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
 
+def plugin_load():
+    from plugins import assetman
+
+    # Assets
+    assetman.register_package(__name__)
+    assetman.t_less(__name__)
+    assetman.t_js(__name__)
+    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
+
+
 def plugin_load_uwsgi():
     from pytsite import lang, router
-    from plugins import assetman, permissions, settings, auth_ui, auth_google
+    from plugins import permissions, settings, auth_ui, auth_google
     from . import _driver, _eh, _settings_form, _controllers
 
     # Language resources
@@ -20,12 +30,6 @@ def plugin_load_uwsgi():
 
     # Event handlers
     router.on_dispatch(_eh.router_dispatch)
-
-    # Assets
-    assetman.register_package(__name__)
-    assetman.t_less(__name__)
-    assetman.t_js(__name__)
-    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
 
     # Settings
     settings.define('auth_google', _settings_form.Form, 'auth_ui_google@auth_google', 'fa fa-google',
