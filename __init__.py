@@ -6,7 +6,7 @@ __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
 
-def _init():
+def plugin_load_uwsgi():
     from pytsite import lang, router
     from plugins import assetman, permissions, settings, auth_ui, auth_google
     from . import _driver, _eh, _settings_form, _controllers
@@ -23,8 +23,8 @@ def _init():
 
     # Assets
     assetman.register_package(__name__)
-    assetman.t_less(__name__ + '@**')
-    assetman.t_js(__name__ + '@**')
+    assetman.t_less(__name__)
+    assetman.t_js(__name__)
     assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
 
     # Settings
@@ -38,6 +38,3 @@ def _init():
 
     except auth_google.error.ClientIdNotDefined:
         pass
-
-
-_init()
