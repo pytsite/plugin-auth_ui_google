@@ -1,11 +1,11 @@
 """PytSite Google Authentication Driver Plugin Settings Form
 """
-from pytsite import lang as _lang, reload as _reload
-from plugins import widget as _widget, settings as _settings
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from pytsite import lang as _lang, reload as _reload
+from plugins import widget as _widget, settings as _settings
 
 
 class Form(_settings.Form):

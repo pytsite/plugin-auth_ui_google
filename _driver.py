@@ -1,11 +1,11 @@
 """PytSite Google Authentication Driver Plugin
 """
-from pytsite import html as _html, metatag as _metatag
-from plugins import widget as _widget, form as _form, auth_ui as _auth_ui
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from pytsite import html as _html, metatag as _metatag
+from plugins import widget as _widget, form as _form, auth_ui as _auth_ui
 
 
 class _SignInWidget(_widget.Abstract):

@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": {
     "en": "Google Sign In UI",
     "ru": "Google Sign In UI",
@@ -13,12 +13,11 @@
     "url": "https://shepetko.com"
   },
   "requires": {
-    "packages": [
-      "google-api-python-client"
-    ],
+    "packages": [],
     "plugins": [
       "assetman",
       "auth_google",
+      "auth_http_api",
       "form",
       "font_awesome",
       "jquery",

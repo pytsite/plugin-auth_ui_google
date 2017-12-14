@@ -1,12 +1,12 @@
 """PytSite Google Authentication Driver Plugin Controllers
 """
-from oauth2client.client import OAuth2WebServerFlow as _OAuth2WebServerFlow
-from pytsite import routing as _routing, router as _router, lang as _lang
-from plugins import auth as _auth, auth_google as _auth_google
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from oauth2client.client import OAuth2WebServerFlow as _OAuth2WebServerFlow
+from pytsite import routing as _routing, router as _router, lang as _lang
+from plugins import auth as _auth, auth_google as _auth_google
 
 
 class Authorization(_routing.Controller):

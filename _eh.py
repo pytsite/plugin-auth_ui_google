@@ -1,11 +1,11 @@
 """PytSite Google Authentication Driver Plugin Events Handlers
 """
-from pytsite import metatag as _metatag, router as _router, lang as _lang
-from plugins import auth as _auth, auth_google
-
 __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
+
+from pytsite import metatag as _metatag, router as _router, lang as _lang
+from plugins import auth as _auth, auth_google
 
 
 def router_dispatch():
