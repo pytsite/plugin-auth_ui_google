@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.1.3 (2017-12-19)
+
+Exception handling fixed.
+
+
 ### 1.1.2 (2017-12-14)
 
 Dependencies list fixed.
