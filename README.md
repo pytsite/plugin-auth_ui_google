@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.1.4 (2017-12-19)
+
+Init code fixed.
+
+
 ### 1.1.3 (2017-12-19)
 
 Exception handling fixed.

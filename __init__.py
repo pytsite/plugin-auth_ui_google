@@ -5,14 +5,24 @@ __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
 
-def plugin_load():
+def _register_assetman_resources():
     from plugins import assetman
 
-    # Assets
-    assetman.register_package(__name__)
-    assetman.t_less(__name__)
-    assetman.t_js(__name__)
-    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
+    if not assetman.is_package_registered(__name__):
+        assetman.register_package(__name__)
+        assetman.t_less(__name__)
+        assetman.t_js(__name__)
+        assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
+
+    return assetman
+
+
+def plugin_install():
+    _register_assetman_resources().build(__name__)
+
+
+def plugin_load():
+    _register_assetman_resources()
 
 
 def plugin_load_uwsgi():
