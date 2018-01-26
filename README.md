@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.2 (2018-01-26)
+
+Support for `auth-1.3` and `settings-1.3`.
+
+
 ### 1.1.4 (2017-12-19)
 
 Init code fixed.

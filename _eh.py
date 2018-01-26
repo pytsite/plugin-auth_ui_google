@@ -17,5 +17,5 @@ def router_dispatch():
         _metatag.t_set('pytsite-auth-google-client-id', client_id)
 
     except auth_google.error.ClientIdNotDefined:
-        if _auth.get_current_user().has_permission('auth_ui_google@manage_settings'):
+        if _auth.get_current_user().has_role('dev'):
             _router.session().add_warning_message(_lang.t('auth_ui_google@plugin_setup_required_warning'))
