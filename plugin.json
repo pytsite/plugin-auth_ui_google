@@ -16,7 +16,7 @@
     "packages": [],
     "plugins": [
       "assetman",
-      "auth>=1.3",
+      "auth>=1.8",
       "auth_google",
       "auth_http_api",
       "form",
