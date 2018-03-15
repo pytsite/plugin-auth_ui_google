@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.2",
+  "version": "1.3",
   "description": {
     "en": "Google Sign In UI",
     "ru": "Google Sign In UI",
@@ -19,7 +19,7 @@
       "auth>=1.8",
       "auth_google",
       "auth_http_api",
-      "form",
+      "form>=2.0",
       "font_awesome",
       "jquery",
       "permissions",

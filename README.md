@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.3 (2018-03-15)
+
+Support for `form-2.0`.
+
+
 ### 1.2 (2018-01-26)
 
 Support for `auth-1.8` and `settings-1.3`.
