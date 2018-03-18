@@ -29,9 +29,6 @@ class _SignInForm(_form.Form):
     """Google Sign In Form
     """
 
-    def _on_setup_form(self, **kwargs):
-        self.nocache = True
-
     def _on_setup_widgets(self):
         self.add_widget(_widget.input.Hidden(self.uid + '-id-token', form_area='hidden'))
         self.add_widget(_SignInWidget(self.uid + '-google-button', client_id=self.attr('client_id')))

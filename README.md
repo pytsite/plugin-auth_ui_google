@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.3.1 (2018-03-18)
+
+Form caching issue fixed.
+
+
 ### 1.3 (2018-03-15)
 
 Support for `form-2.0`.
