@@ -34,7 +34,7 @@ class _SignInForm(_form.Form):
         self.add_widget(_SignInWidget(self.uid + '-google-button', client_id=self.attr('client_id')))
 
         # Submit button is not necessary, form submit performs by JS code
-        self.remove_widget('action-submit')
+        self.remove_widget('action_submit')
 
 
 class UI(_auth_ui.Driver):
