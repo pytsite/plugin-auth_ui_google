@@ -4,7 +4,7 @@ __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from pytsite import html as _html, metatag as _metatag
+from pytsite import html as _html, metatag as _metatag, http as _http
 from plugins import widget as _widget, form as _form, auth_ui as _auth_ui
 
 
@@ -60,14 +60,19 @@ class UI(_auth_ui.Driver):
         """
         return 'Google'
 
-    def get_sign_up_form(self, **kwargs) -> _form.Form:
+    def get_sign_up_form(self, request: _http.Request, **kwargs) -> _form.Form:
         """Get sign in form
         """
-        return self.get_sign_in_form(**kwargs)
+        return self.get_sign_in_form(request, **kwargs)
 
-    def get_sign_in_form(self, **kwargs) -> _form.Form:
+    def get_sign_in_form(self, request: _http.Request, **kwargs) -> _form.Form:
         """Get sign in form
         """
         _metatag.t_set('google-signin-client_id', self._client_id)
 
-        return _SignInForm(client_id=self._client_id, **kwargs)
+        return _SignInForm(request, client_id=self._client_id, **kwargs)
+
+    def get_restore_account_form(self, request: _http.Request, **kwargs):
+        """Get account restoration form
+        """
+        raise NotImplementedError('Not implemented yet')

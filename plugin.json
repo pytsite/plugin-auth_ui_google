@@ -1,10 +1,10 @@
 {
   "name": "auth_ui_google",
-  "version": "1.4",
+  "version": "1.5",
   "description": {
-    "en": "Google Sign In UI",
-    "ru": "Google Sign In UI",
-    "uk": "Google Sign In UI"
+    "en": "Google Auth UI",
+    "ru": "Google Auth UI",
+    "uk": "Google Auth UI"
   },
   "url": "https://github.com/pytsite/plugin-auth_ui_google",
   "author": {
@@ -13,12 +13,14 @@
     "url": "https://shepetko.com"
   },
   "requires": {
+    "pytsite": ">=7.17",
     "plugins": [
       "assetman",
       "auth>=1.8",
       "auth_google",
       "auth_http_api",
-      "form>=2.3",
+      "auth_ui>=3.2",
+      "form>=4.0",
       "font_awesome",
       "jquery",
       "permissions",

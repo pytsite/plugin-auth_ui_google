@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.5 (2018-05-06)
+
+Support of PytSite-7.17, `auth_ui-3.2`, `form-4.0`.
+
+
 ### 1.4 (2018-04-04)
 
 Support for `form-2.3`.
