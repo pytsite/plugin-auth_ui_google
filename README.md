@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.6 (2018-05-13)
+
+Support of `widget-2.0`.
+
+
 ### 1.5 (2018-05-06)
 
 Support of PytSite-7.17, `auth_ui-3.2`, `form-4.0`.
