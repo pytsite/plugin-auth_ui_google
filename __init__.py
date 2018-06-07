@@ -42,7 +42,7 @@ def plugin_load_uwsgi():
     try:
         auth_ui.register_driver(_driver.UI(auth_google.get_client_id()))
         router.handle(_controllers.Authorization, '/auth_google/authorization', 'auth_ui_google@authorization',
-                      filters=auth_ui.AuthFilterController)
+                      filters=auth_ui.AuthFilter)
 
     except auth_google.error.ClientIdNotDefined:
         pass

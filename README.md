@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.7 (2018-06-07)
+
+Support of `auth_ui-3.5`.
+
+
 ### 1.6 (2018-05-13)
 
 Support of `widget-2.0`.
