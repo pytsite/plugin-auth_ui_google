@@ -15,7 +15,7 @@ def plugin_load():
 
     # Assets
     assetman.t_less(__name__)
-    assetman.t_js(__name__)
+    assetman.t_js(__name__, babelify=True)
     assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
 
 

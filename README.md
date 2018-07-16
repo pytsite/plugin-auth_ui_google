@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.8 (2018-07-16)
+
+Support of `auth_http_api-2.0`.
+
+
 ### 1.7 (2018-06-07)
 
 Support of `auth_ui-3.5`.

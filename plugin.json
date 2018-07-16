@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.7",
+  "version": "1.8",
   "description": {
     "en": "Google Auth UI",
     "ru": "Google Auth UI",
@@ -18,7 +18,7 @@
       "assetman",
       "auth>=1.8",
       "auth_google",
-      "auth_http_api",
+      "auth_http_api>=2.0",
       "auth_ui>=3.5",
       "form>=4.0",
       "font_awesome",

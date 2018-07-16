@@ -4,8 +4,10 @@ __author__ = 'Alexander Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from pytsite import html as _html, metatag as _metatag, http as _http
+from pytsite import html as _html, metatag as _metatag, http as _http, reg as _reg
 from plugins import widget as _widget, form as _form, auth_ui as _auth_ui
+
+_BS_VER = _reg.get('auth_ui_google.twitter_bootstrap_version', 4)
 
 
 class _SignInWidget(_widget.Abstract):
@@ -28,6 +30,11 @@ class _SignInWidget(_widget.Abstract):
 class _SignInForm(_form.Form):
     """Google Sign In Form
     """
+
+    def _on_setup_form(self):
+        self.assets.extend([
+            'twitter-bootstrap-{}'.format(_BS_VER)
+        ])
 
     def _on_setup_widgets(self):
         self.add_widget(_widget.input.Hidden(self.uid + '-id-token', form_area='hidden'))
