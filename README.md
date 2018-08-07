@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.10 (2018-08-08)
+
+Support of `form-4.12`.
+
+
 ### 1.9 (2018-08-08)
 
 Support of `widget-2.8`.

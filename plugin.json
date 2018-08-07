@@ -20,7 +20,7 @@
       "auth_google",
       "auth_http_api>=2.0",
       "auth_ui>=3.5",
-      "form>=4.0",
+      "form>=4.12",
       "font_awesome",
       "jquery",
       "permissions",
