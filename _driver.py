@@ -21,6 +21,7 @@ class _SignInWidget(_widget.Abstract):
 
         self._css += ' widget-google-sign-in'
         self._data['client_id'] = kwargs.get('client_id', '')
+        self._assets.append('auth_ui_google@css/auth-google-widget.css')
         self._js_modules.append('auth-google-widget')
 
     def _get_element(self, **kwargs) -> _html.Element:
@@ -37,8 +38,8 @@ class _SignInForm(_form.Form):
         ])
 
     def _on_setup_widgets(self):
-        self.add_widget(_widget.input.Hidden(self.uid + '-id-token', form_area='hidden'))
-        self.add_widget(_SignInWidget(self.uid + '-google-button', client_id=self.attr('client_id')))
+        self.add_widget(_widget.input.Hidden('id_token', form_area='hidden'))
+        self.add_widget(_SignInWidget(self.uid + '_google_button', client_id=self.attr('client_id')))
 
         # Submit button is not necessary, form submit performs by JS code
         self.remove_widget('action_submit')

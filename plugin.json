@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.8",
+  "version": "1.9",
   "description": {
     "en": "Google Auth UI",
     "ru": "Google Auth UI",
@@ -26,7 +26,7 @@
       "permissions",
       "reload_ui",
       "settings>=1.3",
-      "widget>=2.0"
+      "widget>=2.8"
     ]
   }
 }

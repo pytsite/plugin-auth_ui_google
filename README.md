@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.9 (2018-08-08)
+
+Support of `widget-2.8`.
+
+
 ### 1.8 (2018-07-16)
 
 Support of `auth_http_api-2.0`.
