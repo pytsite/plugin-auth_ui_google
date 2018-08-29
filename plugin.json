@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "1.9",
+  "version": "1.10.1",
   "description": {
     "en": "Google Auth UI",
     "ru": "Google Auth UI",

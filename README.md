@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 1.10.1 (2018-08-30)
+
+plugin.json fixed.
+
+
 ### 1.10 (2018-08-08)
 
 Support of `form-4.12`.
