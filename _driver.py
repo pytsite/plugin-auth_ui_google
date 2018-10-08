@@ -30,11 +30,6 @@ class _SignInForm(_form.Form):
     """Google Sign In Form
     """
 
-    def _on_setup_form(self):
-        self.assets.extend([
-            'twitter-bootstrap-{}'.format(_BS_VER)
-        ])
-
     def _on_setup_widgets(self):
         self.add_widget(_widget.input.Hidden('id_token', form_area='hidden'))
         self.add_widget(_SignInWidget(self.uid + '_google_button', client_id=self.attr('client_id')))

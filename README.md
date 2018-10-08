@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 2.0.1 (2018-10-08)
+
+Cleanup.
+
+
 ### 2.0 (2018-10-08)
 
 Support of `pytsite-8.x`.
