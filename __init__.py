@@ -1,31 +1,11 @@
 """PytSite Google Authentication UI Driver
 """
-__author__ = 'Alexander Shepetko'
+__author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
 
-def plugin_load():
-    from pytsite import lang
-    from plugins import assetman
-
-    # Resources
-    lang.register_package(__name__)
-    assetman.register_package(__name__)
-
-    # Assets
-    assetman.t_less(__name__)
-    assetman.t_js(__name__, babelify=True)
-    assetman.js_module('auth-google-widget', __name__ + '@js/auth-google-widget')
-
-
-def plugin_install():
-    from plugins import assetman
-
-    assetman.build(__name__)
-
-
-def plugin_load_uwsgi():
+def plugin_load_wsgi():
     from pytsite import lang, router
     from plugins import settings, auth_ui, auth_google
     from . import _driver, _eh, _settings_form, _controllers

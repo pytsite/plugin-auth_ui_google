@@ -1,6 +1,6 @@
 """PytSite Google Authentication Driver Plugin
 """
-__author__ = 'Alexander Shepetko'
+__author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
@@ -21,8 +21,6 @@ class _SignInWidget(_widget.Abstract):
 
         self._css += ' widget-google-sign-in'
         self._data['client_id'] = kwargs.get('client_id', '')
-        self._assets.append('auth_ui_google@css/auth-google-widget.css')
-        self._js_modules.append('auth-google-widget')
 
     def _get_element(self, **kwargs) -> _html.Element:
         return _html.Div(uid=self.uid, css='button-container')

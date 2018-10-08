@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 2.0 (2018-10-08)
+
+Support of `pytsite-8.x`.
+
+
 ### 1.10.1 (2018-08-30)
 
 plugin.json fixed.
