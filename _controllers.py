@@ -42,7 +42,7 @@ class Authorization(_routing.Controller):
             scope = self.args.pop('scope')  # type: str
             if scope and ',' in scope:
                 scope = scope.split(',')
-            flow = _auth_google.create_oauth2_flow(scope, _router.current_url(True, add_query=dict(self.args)))
+            flow = _auth_google.create_oauth2_flow(scope, _router.current_url(True, query=dict(self.args)))
             _router.session()['google_oauth2_flow'] = flow
             _router.session()['google_oauth2_final_redirect'] = self.args.pop('__redirect', _router.base_url())
 
