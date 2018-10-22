@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "2.1",
+  "version": "2.2",
   "description": {
     "en": "Google Auth UI",
     "ru": "Google Auth UI",
@@ -15,7 +15,7 @@
   "requires": {
     "pytsite": ">=8",
     "plugins": {
-      "assetman": "4.x",
+      "assetman": "5.x",
       "auth": "3.x",
       "auth_google": "2.x",
       "auth_http_api": "3.x",
@@ -24,7 +24,7 @@
       "permissions": "1.x",
       "reload_ui": "2.x",
       "settings": "2.x",
-      "widget": "3.x"
+      "widget": "4.x"
     }
   }
 }

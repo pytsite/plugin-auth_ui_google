@@ -1,14 +1,14 @@
 import './index.scss';
-
-const $ = require('jquery');
-const assetman = require('@pytsite/assetman');
-const pytsiteAuth = require('@pytsite/auth-http-api');
-const google = require('@pytsite/google');
+import $ from 'jquery';
+import setupWidget from '@pytsite/widget';
+import assetman from '@pytsite/assetman';
+import pytsiteAuth from '@pytsite/auth-http-api';
+import google from '@pytsite/google';
 
 /**
  * While writing code for this widget, refer to https://developers.google.com/identity/sign-in/web/reference
  */
-require('@pytsite/widget').onWidgetLoad('plugins.auth_ui_google._driver._SignInWidget', (widget) => {
+setupWidget('plugins.auth_ui_google._driver._SignInWidget', widget => {
     const form = $('.auth-ui-sign-in.driver-google');
 
     form.on('submit:form:pytsite', function () {
