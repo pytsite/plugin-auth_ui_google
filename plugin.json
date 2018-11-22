@@ -1,6 +1,6 @@
 {
   "name": "auth_ui_google",
-  "version": "2.2",
+  "version": "2.3",
   "description": {
     "en": "Google Auth UI",
     "ru": "Google Auth UI",
@@ -21,6 +21,7 @@
       "auth_http_api": "3.x",
       "auth_ui": "4.x",
       "form": "5.x",
+      "http_api": ">=3.3<4",
       "permissions": "1.x",
       "reload_ui": "2.x",
       "settings": "2.x",

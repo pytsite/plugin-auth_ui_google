@@ -19,7 +19,7 @@ setupWidget('plugins.auth_ui_google._driver._SignInWidget', widget => {
     google.ready(function (gapi) {
         gapi.load('auth2', function () {
             gapi.auth2.init().then(function () {
-                pytsiteAuth.me().fail(function (e) {
+                pytsiteAuth.me().catch(e => {
                     if (e.status === 403) {
                         gapi.auth2.getAuthInstance().signOut();
                         gapi.signin2.render(widget.uid, {
