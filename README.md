@@ -7,6 +7,11 @@ authentication driver.
 ## Changelog
 
 
+### 2.4 (2018-11-22)
+
+Support of `pytsite-9.0`.
+
+
 ### 2.3 (2018-11-22)
 
 Support of `http_api-3.3`.

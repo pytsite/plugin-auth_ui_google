@@ -4,13 +4,14 @@ __author__ = 'Oleksandr Shepetko'
 __email__ = 'a@shepetko.com'
 __license__ = 'MIT'
 
-from pytsite import html as _html, metatag as _metatag, http as _http, reg as _reg
-from plugins import widget as _widget, form as _form, auth_ui as _auth_ui
+import htmler
+from pytsite import metatag, http, reg
+from plugins import widget, form, auth_ui
 
-_BS_VER = _reg.get('auth_ui_google.twitter_bootstrap_version', 4)
+_BS_VER = reg.get('auth_ui_google.twitter_bootstrap_version', 4)
 
 
-class _SignInWidget(_widget.Abstract):
+class _SignInWidget(widget.Abstract):
     """Google Sign In Widget
     """
 
@@ -22,23 +23,23 @@ class _SignInWidget(_widget.Abstract):
         self._css += ' widget-google-sign-in'
         self._data['client_id'] = kwargs.get('client_id', '')
 
-    def _get_element(self, **kwargs) -> _html.Element:
-        return _html.Div(uid=self.uid, css='button-container')
+    def _get_element(self, **kwargs) -> htmler.Element:
+        return htmler.Div(id=self.uid, css='button-container')
 
 
-class _SignInForm(_form.Form):
+class _SignInForm(form.Form):
     """Google Sign In Form
     """
 
     def _on_setup_widgets(self):
-        self.add_widget(_widget.input.Hidden('id_token', form_area='hidden'))
+        self.add_widget(widget.input.Hidden('id_token', form_area='hidden'))
         self.add_widget(_SignInWidget(self.uid + '_google_button', client_id=self.attr('client_id')))
 
         # Submit button is not necessary, form submit performs by JS code
         self.remove_widget('action_submit')
 
 
-class UI(_auth_ui.Driver):
+class UI(auth_ui.Driver):
     """Auth UI Driver
     """
 
@@ -61,19 +62,19 @@ class UI(_auth_ui.Driver):
         """
         return 'Google'
 
-    def get_sign_up_form(self, request: _http.Request, **kwargs) -> _form.Form:
+    def get_sign_up_form(self, request: http.Request, **kwargs) -> form.Form:
         """Get sign in form
         """
         return self.get_sign_in_form(request, **kwargs)
 
-    def get_sign_in_form(self, request: _http.Request, **kwargs) -> _form.Form:
+    def get_sign_in_form(self, request: http.Request, **kwargs) -> form.Form:
         """Get sign in form
         """
-        _metatag.t_set('google-signin-client_id', self._client_id)
+        metatag.t_set('google-signin-client_id', self._client_id)
 
         return _SignInForm(request, client_id=self._client_id, **kwargs)
 
-    def get_restore_account_form(self, request: _http.Request, **kwargs):
+    def get_restore_account_form(self, request: http.Request, **kwargs):
         """Get account restoration form
         """
         raise NotImplementedError('Not implemented yet')
